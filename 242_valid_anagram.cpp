@@ -21,18 +21,18 @@ public:
             // 1 - s and t have different letters 
             // 2 - s and t have the same letters but in different amounts 
 
-            // let us examine case 1
-            // if s and t are the same length but have different letters, then there must be a letter in t that is not in s
-            // then, letter_count_map[c] will be initially set to 0 for c in t
+            // case 1
+            // if s and t are the same length but have different letters, then there must be a letter c in t that is not in s
+            // then, letter_count_map[c] will be initially set to 0 
             // decrementing it with letter_count_map[c]-- will then set letter_count_map[c]-- to -1 
             // this triggers the return false
 
             // case 2 
             // if s and t and have the same letters but different amounts, there must be some letter c in t that there is more of in t than s 
-            // then, letter_count_map[c] will be decreased past 0 for c in t 
-            // this triggers the fales 
+            // then, letter_count_map[c] will eventually be decreased past 0 
+            // this triggers the return false 
 
-            // if neither of these cases, then s and t are anagrams
+            // if neither of these cases, then s and t have the same letters in the same amount, ie s and t are anagrams
             }
         }
 
